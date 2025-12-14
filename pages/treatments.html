@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCare - Treatment Methods</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .ipm-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+
+        .treatment-card {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #333;
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* CARD 1: CULTURAL (Green - Prevention) */
+        .card-cultural { border-top: 4px solid #8FD646; }
+        .card-cultural:hover { box-shadow: 0 10px 30px rgba(143, 214, 70, 0.15); }
+        .card-cultural h3 { color: #8FD646; }
+
+        /* CARD 2: BIOLOGICAL (Blue - Nature) */
+        .card-bio { border-top: 4px solid #4CC9F0; }
+        .card-bio:hover { box-shadow: 0 10px 30px rgba(76, 201, 240, 0.15); }
+        .card-bio h3 { color: #4CC9F0; }
+
+        /* CARD 3: CHEMICAL (Red - Danger) */
+        .card-chem { border-top: 4px solid #EF476F; }
+        .card-chem:hover { box-shadow: 0 10px 30px rgba(239, 71, 111, 0.15); }
+        .card-chem h3 { color: #EF476F; }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background: #222;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Stylish List */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .styled-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+        .styled-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #555;
+            font-size: 14px;
+        }
+        
+        /* Specific Checkmark Colors */
+        .card-cultural .styled-list li::before { color: #8FD646; }
+        .card-bio .styled-list li::before { color: #4CC9F0; }
+        .card-chem .styled-list li::before { content: '⚠️'; font-size: 12px; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AgriCare <span>Intelligent Solutions</span></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="disease-library.html">Diseases</a>
+            <a href="learning-hub.html" class="active">Solutions</a>
+            <a href="contact.html">Contact</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 100px; flex-direction: column;">
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 3rem;">IPM <span style="color: #8FD646;">Strategies</span></h1>
+            <p style="color: #bbb;">Integrated Pest Management: The sustainable approach to farming.</p>
+        </div>
+
+        <div class="ipm-container">
+
+            <div class="treatment-card card-cultural">
+                <div class="icon-circle" style="border: 2px solid #8FD646;">🌱</div>
+                <h3>1. Prevention</h3>
+                <p style="color: #888; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Cultural Control</p>
+                
+                <p style="margin-top: 15px; line-height: 1.6;">The foundation of healthy farming. Stop the disease before it starts.</p>
+                
+                <ul class="styled-list">
+                    <li><strong>Crop Rotation:</strong> Rotate with legumes to break fungal life cycles.</li>
+                    <li><strong>Fallow Period:</strong> Leave field dry for 2-3 weeks to kill spores.</li>
+                    <li><strong>Clean Seeds:</strong> Use Department of Agriculture certified seeds only.</li>
+                    <li><strong>Spacing:</strong> Maintain 20cm gaps to reduce humidity.</li>
+                </ul>
+            </div>
+
+            <div class="treatment-card card-bio">
+                <div class="icon-circle" style="border: 2px solid #4CC9F0;">🐞</div>
+                <h3>2. Nature's Army</h3>
+                <p style="color: #888; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Biological Control</p>
+                
+                <p style="margin-top: 15px; line-height: 1.6;">Using living organisms and natural enemies to control pest populations.</p>
+                
+                <ul class="styled-list">
+                    <li><strong>Predators:</strong> Protect Dragonflies and Spiders; they eat Planthoppers.</li>
+                    <li><strong>Trichogramma:</strong> Release these parasitic wasps to destroy stem borer eggs.</li>
+                    <li><strong>Ducks:</strong> Release ducks into the field to eat snails and weeds.</li>
+                </ul>
+            </div>
+
+            <div class="treatment-card card-chem">
+                <div class="icon-circle" style="border: 2px solid #EF476F;">☣️</div>
+                <h3>3. Last Resort</h3>
+                <p style="color: #888; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Chemical Control</p>
+                
+                <p style="margin-top: 15px; line-height: 1.6;">Use synthetic pesticides only when absolutely necessary.</p>
+                
+                <ul class="styled-list">
+                    <li><strong>Thresholds:</strong> Only spray if damage exceeds 5% of the crop.</li>
+                    <li><strong>Fungicides:</strong> Use Tebuconazole or Azoxystrobin (Apply early morning).</li>
+                    <li><strong>Safety:</strong> Always wear masks, gloves, and boots.</li>
+                    <li><strong>Pre-Harvest:</strong> Stop spraying 14 days before harvest.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 50px; background: rgba(255, 255, 255, 0.05); padding: 20px 40px; border-radius: 50px; border: 1px solid #333; display: flex; align-items: center; gap: 20px;">
+            <span style="font-size: 24px;">💡</span>
+            <p style="color: #ccc; margin: 0;"><strong>Tip:</strong> Always try Cultural and Biological methods first. They are cheaper and safer.</p>
+        </div>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCare - Fertilizer Guide</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            width: 90%;
+            margin-top: 50px;
+        }
+
+        /* The Vertical Line */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50px; /* Position of the line */
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #8FD646, #00b4d8, #ef476f);
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        /* The Card Container */
+        .timeline-step {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 120px; /* Space for the circle */
+        }
+
+        /* The Number Circle */
+        .step-circle {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: #111;
+            border: 4px solid #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            z-index: 1;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        /* Specific Colors for Steps */
+        .step-1 .step-circle { border-color: #8FD646; color: #8FD646; }
+        .step-2 .step-circle { border-color: #00b4d8; color: #00b4d8; }
+        .step-3 .step-circle { border-color: #ef476f; color: #ef476f; }
+
+        /* The Glass Card */
+        .step-card {
+            background: rgba(20, 20, 20, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateX(10px);
+            background: rgba(30, 30, 30, 0.9);
+        }
+
+        /* Chemical Tags */
+        .chem-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .tag-urea { background: rgba(0, 180, 216, 0.2); color: #00b4d8; border: 1px solid #00b4d8; }
+        .tag-tsp { background: rgba(143, 214, 70, 0.2); color: #8FD646; border: 1px solid #8FD646; }
+        .tag-mop { background: rgba(239, 71, 111, 0.2); color: #ef476f; border: 1px solid #ef476f; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .timeline-container::before { left: 20px; }
+            .step-circle { left: -10px; width: 50px; height: 50px; font-size: 20px; }
+            .timeline-step { padding-left: 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AgriCare <span>Intelligent Solutions</span></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="disease-library.html">Diseases</a>
+            <a href="learning-hub.html" class="active">Solutions</a>
+            <a href="contact.html">Contact</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 100px; flex-direction: column;">
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 3rem;">Fertilizer <span style="color: #8FD646;">Plan</span></h1>
+            <p style="color: #bbb;">Recommended schedule for 3.5 Month Paddy Varieties.</p>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.05); padding: 20px 40px; border-radius: 15px; border: 1px solid #333; display: flex; gap: 40px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center;">
+            <div style="text-align: center;">
+                <h2 style="color: white; margin: 0;">3 Phases</h2>
+                <p style="color: #888; font-size: 13px; margin: 5px 0 0 0;">Application Cycle</p>
+            </div>
+            <div style="text-align: center; border-left: 1px solid #444; padding-left: 40px;">
+                <h2 style="color: #8FD646; margin: 0;">N-P-K</h2>
+                <p style="color: #888; font-size: 13px; margin: 5px 0 0 0;">Core Nutrients</p>
+            </div>
+        </div>
+
+        <div class="timeline-container">
+
+            <div class="timeline-step step-1">
+                <div class="step-circle">1</div>
+                <div class="step-card">
+                    <h5 style="color: #888; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Phase 1: Basal Dressing</h5>
+                    <h2 style="color: white; margin-top: 5px;">At Sowing / Planting</h2>
+                    <p style="color: #ccc; line-height: 1.6;">
+                        Apply this mixture to prepare the soil before you sow the seeds. This helps strong root development.
+                    </p>
+                    <div style="margin-top: 15px;">
+                        <span class="chem-tag tag-urea">Urea: 15kg/acre</span>
+                        <span class="chem-tag tag-tsp">TSP: 25kg/acre</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-step step-2">
+                <div class="step-circle">2</div>
+                <div class="step-card">
+                    <h5 style="color: #888; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Phase 2: Top Dressing 1</h5>
+                    <h2 style="color: white; margin-top: 5px;">2 Weeks After Sowing</h2>
+                    <p style="color: #ccc; line-height: 1.6;">
+                        The "Vegetative Stage". The plant needs Nitrogen to grow tall and produce leaves.
+                    </p>
+                    <div style="margin-top: 15px;">
+                        <span class="chem-tag tag-urea">Urea: 35kg/acre</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-step step-3">
+                <div class="step-circle">3</div>
+                <div class="step-card">
+                    <h5 style="color: #888; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Phase 3: Top Dressing 2</h5>
+                    <h2 style="color: white; margin-top: 5px;">7-8 Weeks After Sowing</h2>
+                    <p style="color: #ccc; line-height: 1.6;">
+                        "Panicle Initiation". The plant prepares to produce rice grains. Potassium is crucial here.
+                    </p>
+                    <div style="margin-top: 15px;">
+                        <span class="chem-tag tag-urea">Urea: 25kg/acre</span>
+                        <span class="chem-tag tag-mop">MOP: 15kg/acre</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p style="color: #666; font-size: 12px; margin-top: 20px;">
+            *Note: Dosages are estimates for Dry Zone. Please consult your local Agrarian Officer for exact soil testing.
+        </p>
+
+    </section>
+
+</body>
+</html>

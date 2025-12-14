@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCare - Smart Tips</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+
+        .tip-card {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hover Effect: Glow and Lift */
+        .tip-card:hover {
+            transform: translateY(-10px);
+            background: rgba(30, 30, 30, 0.8);
+            border-color: #8FD646;
+            box-shadow: 0 10px 30px rgba(143, 214, 70, 0.15);
+        }
+
+        /* The Icon Circle */
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: #111;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+            transition: 0.3s;
+        }
+
+        .tip-card:hover .icon-box {
+            border-color: #8FD646;
+            color: #8FD646;
+        }
+
+        /* The "Impact Tag" at top right */
+        .impact-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            border: 1px solid #444;
+        }
+        
+        .tip-card:hover .impact-tag {
+            background: #8FD646;
+            color: black;
+            border-color: #8FD646;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AgriCare <span>Intelligent Solutions</span></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="learning-hub.html">Back to Solutions</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 100px; flex-direction: column;">
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h1 style="font-size: 3rem;">Precision <span style="color: #8FD646;">Farming</span></h1>
+            <p style="color: #bbb;">Small changes that create massive harvests.</p>
+        </div>
+
+        <div class="tips-grid">
+
+            <div class="tip-card">
+                <div class="impact-tag">Saves 30% Water</div>
+                <div class="icon-box">💧</div>
+                <h3 style="color: white; margin-bottom: 10px;">AWD Method</h3>
+                <h5 style="color: #888; margin: 0 0 15px 0;">Alternate Wetting & Drying</h5>
+                <p style="color: #ccc; line-height: 1.6; font-size: 15px;">
+                    Don't flood the field continuously. Let the water level drop 15cm below the surface before re-flooding. This strengthens roots and reduces methane emissions.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <div class="impact-tag">Prevents Fungi</div>
+                <div class="icon-box">📏</div>
+                <h3 style="color: white; margin-bottom: 10px;">Optimal Spacing</h3>
+                <h5 style="color: #888; margin: 0 0 15px 0;">20cm x 20cm Grid</h5>
+                <p style="color: #ccc; line-height: 1.6; font-size: 15px;">
+                    Overcrowding stops airflow and traps humidity. High humidity is the #1 cause of Fungal Blast. Give your plants room to breathe.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <div class="impact-tag">Natural Defense</div>
+                <div class="icon-box">🐝</div>
+                <h3 style="color: white; margin-bottom: 10px;">Ecological Engineering</h3>
+                <h5 style="color: #888; margin: 0 0 15px 0;">Flower Bunds (Niyara)</h5>
+                <p style="color: #ccc; line-height: 1.6; font-size: 15px;">
+                    Plant yellow flowers (like Marigolds) on the bunds. These attract wasps and spiders, which naturally hunt down harmful Planthoppers.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <div class="impact-tag">Boosts Carbon</div>
+                <div class="icon-box">🍂</div>
+                <h3 style="color: white; margin-bottom: 10px;">Straw Recycling</h3>
+                <h5 style="color: #888; margin: 0 0 15px 0;">Don't Burn, Return</h5>
+                <p style="color: #ccc; line-height: 1.6; font-size: 15px;">
+                    Instead of burning paddy straw, plough it back into the soil. It returns Potassium (K) to the earth, saving you money on MOP fertilizer.
+                </p>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 50px;">
+            <a href="fertilizer-guide.html" style="color: #8FD646; text-decoration: none; border-bottom: 1px solid #8FD646; padding-bottom: 5px;">
+                Check Fertilizer Guidelines →
+            </a>
+        </div>
+
+    </section>
+
+</body>
+</html>

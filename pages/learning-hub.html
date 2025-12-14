@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCare - Learning Hub</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 40px;
+        }
+
+        .hub-card {
+            background: rgba(255, 255, 255, 0.03); /* Very dark glass */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 200px;
+        }
+
+        /* Hover Effects */
+        .hub-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #8FD646;
+            box-shadow: 0 10px 30px rgba(143, 214, 70, 0.15); /* Green Glow */
+        }
+
+        /* Icon Animation */
+        .hub-card .icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            transition: transform 0.4s ease;
+        }
+        .hub-card:hover .icon {
+            transform: scale(1.2); /* Icon grows */
+        }
+
+        .hub-card h3 {
+            color: white;
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+
+        .hub-card p {
+            color: #aaa;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* The little arrow at bottom right */
+        .arrow-link {
+            margin-top: 20px;
+            color: #8FD646;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .arrow-link span {
+            font-size: 18px;
+            margin-left: 5px;
+            transition: margin-left 0.3s ease;
+        }
+        
+        .hub-card:hover .arrow-link span {
+            margin-left: 10px; /* Arrow moves right on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AgriCare <span>Intelligent Solutions</span></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="disease-library.html">Diseases</a>
+            <a href="learning-hub.html" class="active">Solutions</a>
+            <a href="contact.html">Contact</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: auto; min-height: 100vh; padding-top: 150px; padding-bottom: 100px; flex-direction: column;">
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h1 style="font-size: 3rem;">Farmer <span style="color: #8FD646;">Knowledge Hub</span></h1>
+            <p style="color: #bbb; margin-top: 10px; font-size: 1.2rem;">Select a tool to improve your harvest.</p>
+        </div>
+
+        <div class="hub-grid">
+            
+            <a href="treatments.html" class="hub-card">
+                <div>
+                    <div class="icon">💊</div>
+                    <h3>Treatments</h3>
+                    <p>Learn IPM strategies, chemical controls, and organic prevention methods.</p>
+                </div>
+                <div class="arrow-link">View Guide <span>→</span></div>
+            </a>
+
+            <a href="fertilizer-guide.html" class="hub-card">
+                <div>
+                    <div class="icon">🌱</div>
+                    <h3>Fertilizer Guide</h3>
+                    <p>Optimize NPK ratios and application timing for maximum yield.</p>
+                </div>
+                <div class="arrow-link">Calculate <span>→</span></div>
+            </a>
+
+            <a href="smart-tips.html" class="hub-card">
+                <div>
+                    <div class="icon">💡</div>
+                    <h3>Smart Tips</h3>
+                    <p>Modern farming hacks, water management, and spacing techniques.</p>
+                </div>
+                <div class="arrow-link">Read Tips <span>→</span></div>
+            </a>
+
+            <a href="faqs.html" class="hub-card">
+                <div>
+                    <div class="icon">❓</div>
+                    <h3>FAQs</h3>
+                    <p>Answers to common questions about using the AgriCare system.</p>
+                </div>
+                <div class="arrow-link">Get Help <span>→</span></div>
+            </a>
+
+            <a href="success-stories.html" class="hub-card">
+                <div>
+                    <div class="icon">🏆</div>
+                    <h3>Success Stories</h3>
+                    <p>See how other Sri Lankan farmers saved their crops using AI.</p>
+                </div>
+                <div class="arrow-link">Read Stories <span>→</span></div>
+            </a>
+
+            <a href="download-app.html" class="hub-card" style="border-color: #333; background: linear-gradient(145deg, rgba(20,20,20,1), rgba(10,10,10,1));">
+                <div>
+                    <div class="icon">📱</div>
+                    <h3 style="color: #8FD646;">Mobile App</h3>
+                    <p>Download AgriCare for offline use in the field.</p>
+                </div>
+                <div class="arrow-link">Download <span>↓</span></div>
+            </a>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

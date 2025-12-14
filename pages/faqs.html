@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCare - Help Center</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Search Bar */
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px 25px;
+            border-radius: 50px;
+            border: 1px solid #333;
+            background: rgba(20, 20, 20, 0.8);
+            color: white;
+            font-size: 16px;
+            outline: none;
+            margin-bottom: 50px;
+            transition: 0.3s;
+            backdrop-filter: blur(5px);
+        }
+        .search-box:focus {
+            border-color: #8FD646;
+            box-shadow: 0 0 15px rgba(143, 214, 70, 0.2);
+        }
+
+        /* The FAQ Item Container */
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05); /* Dark Glass */
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* The Question (Clickable) */
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #8FD646;
+        }
+
+        /* The Plus Icon (+) */
+        .icon {
+            font-size: 20px;
+            transition: transform 0.3s ease;
+            color: #8FD646;
+        }
+
+        /* The Answer (Hidden by Default) */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 25px;
+            color: #bbb;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* === ACTIVE STATE (When Clicked) === */
+        .faq-item.active {
+            background: rgba(20, 20, 20, 0.95);
+            border-color: #8FD646;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .faq-item.active .icon {
+            transform: rotate(45deg); /* Turns + into x */
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 150px; /* Expands to show text */
+            padding-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AgriCare <span>Intelligent Solutions</span></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="learning-hub.html">Back to Hub</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 100px; flex-direction: column;">
+        
+        <h1 style="font-size: 3rem; margin-bottom: 10px;">Help Center</h1>
+        <p style="color: #bbb; margin-bottom: 30px;">Find answers to common questions about AgriCare.</p>
+
+        <input type="text" class="search-box" placeholder="🔍  Search for questions (e.g. 'How to scan')">
+
+        <div style="width: 90%; max-width: 800px;">
+
+            <div class="faq-item active"> <div class="faq-question">
+                    How do I scan a leaf correctly?
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Go to the Home page and click "Scan Now." Ensure you are in a well-lit area. Hold your phone steady and take a close-up photo of the affected part of the leaf. Avoid blurry images for the best accuracy.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Is this service free for farmers?
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, absolutely. AgriCare is a non-profit initiative designed to help Sri Lankan farmers. All features, including the AI scanner and Disease Library, are 100% free.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Which diseases can the AI detect?
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our model is currently trained to detect: Brown Spot, Paddy Blast, Bacterial Leaf Blight, Tungro, and Stem Borer damage. We are constantly updating the database.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Does the app work without internet?
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The website requires an internet connection to analyze images. However, our downloadable Mobile App (coming soon) will have an offline mode for basic diagnosis in remote fields.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How accurate is the diagnosis?
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our AI model has an accuracy rate of approximately 94.2% based on our test dataset. However, we always recommend consulting a local Agrarian Officer for final confirmation before using chemical treatments.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        // Select all FAQ items
+        const faqs = document.querySelectorAll('.faq-item');
+
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                // Toggle the 'active' class on the clicked item
+                faq.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

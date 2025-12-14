@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCare - Download App</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .app-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        /* Left Side: Text */
+        .app-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Right Side: Phone Visual */
+        .app-visual {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            perspective: 1000px; /* For 3D effect */
+        }
+
+        /* CSS Phone Mockup */
+        .mockup-phone {
+            width: 280px;
+            height: 550px;
+            background: #000;
+            border: 4px solid #333;
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(143, 214, 70, 0.1);
+            position: relative;
+            overflow: hidden;
+            transform: rotateY(-15deg) rotateX(5deg);
+            transition: transform 0.5s ease;
+        }
+
+        .mockup-phone:hover {
+            transform: rotateY(0deg) rotateX(0deg);
+        }
+
+        /* Screen Content */
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #111, #050505);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* App Store Buttons */
+        .store-btn {
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+            width: fit-content;
+        }
+
+        .btn-apple {
+            background: rgba(255,255,255,0.1);
+            color: white;
+        }
+        .btn-apple:hover { background: white; color: black; }
+
+        .btn-google {
+            background: transparent;
+            border-color: #8FD646;
+            color: #8FD646;
+        }
+        .btn-google:hover { background: #8FD646; color: black; }
+
+        /* Feature List */
+        .app-features {
+            margin: 30px 0;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+        .check-icon {
+            color: #8FD646;
+            margin-right: 10px;
+            background: rgba(143, 214, 70, 0.1);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        /* QR Code Box */
+        .qr-box {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        /* The Notch on Phone */
+        .notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 25px;
+            background: #333;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: 10;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AgriCare <span>Intelligent Solutions</span></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="learning-hub.html">Back to Hub</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 50px;">
+        
+        <div class="app-container">
+            
+            <div class="app-text">
+                <span style="background: rgba(143, 214, 70, 0.1); color: #8FD646; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold; border: 1px solid #8FD646;">BETA ACCESS</span>
+                
+                <h1 style="font-size: 3.5rem; margin-top: 15px; margin-bottom: 15px;">Farming Intelligence.<br><span style="color: #8FD646;">Offline.</span></h1>
+                
+                <p style="color: #bbb; line-height: 1.6; font-size: 18px;">
+                    Take the power of the AgriCare AI into the most remote fields. Diagnose diseases without an internet connection.
+                </p>
+
+                <div class="app-features">
+                    <div class="feature-item">
+                        <div class="check-icon">✓</div>
+                        <span>Offline Scanning Mode</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="check-icon">✓</div>
+                        <span>Real-time Weather Alerts</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="check-icon">✓</div>
+                        <span>Save History to Cloud</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="#" class="store-btn btn-apple">
+                        <span style="font-size: 24px; margin-right: 10px;"></span>
+                        <div>
+                            <div style="font-size: 10px;">Download on the</div>
+                            <div style="font-size: 16px; font-weight: bold;">App Store</div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="store-btn btn-google">
+                        <span style="font-size: 24px; margin-right: 10px;">▶</span>
+                        <div>
+                            <div style="font-size: 10px;">GET IT ON</div>
+                            <div style="font-size: 16px; font-weight: bold;">Google Play</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div style="margin-top: 30px; display: flex; align-items: center; gap: 20px;">
+                    <div class="qr-box">
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; width: 100%; height: 100%;">
+                            <div style="background:black"></div><div style="background:black"></div><div style="background:black"></div><div style="background:white"></div>
+                            <div style="background:black"></div><div style="background:white"></div><div style="background:black"></div><div style="background:black"></div>
+                            <div style="background:black"></div><div style="background:black"></div><div style="background:black"></div><div style="background:white"></div>
+                            <div style="background:white"></div><div style="background:black"></div><div style="background:white"></div><div style="background:black"></div>
+                        </div>
+                    </div>
+                    <p style="font-size: 12px; color: #666; width: 150px;">Scan to download directly to your device.</p>
+                </div>
+
+            </div>
+
+            <div class="app-visual">
+                <div class="mockup-phone">
+                    <div class="notch"></div>
+                    <div class="phone-screen">
+                        
+                        <div style="text-align: center;">
+                            <h2 style="color: white; margin: 0; font-size: 24px;">AgriCare</h2>
+                            <p style="color: #8FD646; font-size: 12px;">Mobile Edition</p>
+                            
+                            <div style="width: 120px; height: 120px; border: 2px solid #333; border-top: 2px solid #8FD646; border-radius: 50%; margin: 40px auto; animation: spin 2s linear infinite;"></div>
+                            
+                            <button style="background: #8FD646; border: none; padding: 10px 30px; border-radius: 20px; font-weight: bold;">Scan Leaf</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
+</body>
+</html>

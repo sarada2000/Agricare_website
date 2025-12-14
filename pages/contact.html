@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCare - Contact Us</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Input Field Animation */
+        .contact-input {
+            width: 100%;
+            padding: 15px;
+            background: #222;
+            border: 1px solid #444;
+            color: white;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+            font-family: sans-serif;
+        }
+
+        .contact-input:focus {
+            border-color: #8FD646;
+            box-shadow: 0 0 15px rgba(143, 214, 70, 0.2);
+            background: #2a2a2a;
+        }
+
+        /* Button Animation */
+        .send-btn {
+            padding: 18px;
+            background: #8FD646;
+            color: black;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .send-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(143, 214, 70, 0.4);
+            background-color: #a3e65c;
+        }
+
+        /* Social Icon Animation */
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            background: #222;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #333;
+            font-weight: bold;
+        }
+
+        .social-btn:hover {
+            background: #8FD646;
+            color: black;
+            transform: translateY(-5px);
+            border-color: #8FD646;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AgriCare <span>Intelligent Solutions</span></div>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="disease-library.html">Diseases</a>
+            <a href="learning-hub.html">Solutions</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="min-height: 100vh; height: auto; padding-top: 150px; padding-bottom: 50px; flex-direction: column;">
+        
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-size: 3.5rem;">Let's Start a <span style="color: #8FD646;">Conversation</span></h1>
+            <p style="color: #bbb; font-size: 1.2rem;">We are here to help farmers, researchers, and students.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); border-radius: 25px; overflow: hidden; max-width: 1100px; width: 90%; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+
+            <div style="flex: 1; min-width: 300px; background: rgba(10, 10, 10, 0.8); padding: 60px; border-right: 1px solid #333; position: relative; overflow: hidden;">
+                
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: #8FD646; opacity: 0.1; border-radius: 50%; filter: blur(40px);"></div>
+
+                <h2 style="color: white; margin-bottom: 40px; font-size: 28px;">Contact Information</h2>
+                
+                <div style="margin-bottom: 30px; display: flex; align-items: center;">
+                    <div style="width: 50px; height: 50px; background: #1a1a1a; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; color: #8FD646; font-size: 24px;">📍</div>
+                    <div>
+                        <p style="color: #888; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Headquarters</p>
+                        <p style="color: #fff; font-size: 18px; margin: 5px 0 0 0;">Colombo 07, Sri Lanka</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 30px; display: flex; align-items: center;">
+                    <div style="width: 50px; height: 50px; background: #1a1a1a; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; color: #8FD646; font-size: 24px;">📧</div>
+                    <div>
+                        <p style="color: #888; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Email Us</p>
+                        <p style="color: #fff; font-size: 18px; margin: 5px 0 0 0;">info@agricare.sl</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 50px; display: flex; align-items: center;">
+                    <div style="width: 50px; height: 50px; background: #1a1a1a; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; color: #8FD646; font-size: 24px;">☎️</div>
+                    <div>
+                        <p style="color: #888; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Hotline</p>
+                        <p style="color: #fff; font-size: 18px; margin: 5px 0 0 0;">+94 77 123 4567</p>
+                    </div>
+                </div>
+
+                <h4 style="color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Connect With Us</h4>
+                <div style="display: flex; gap: 15px;">
+                    <div class="social-btn">f</div>
+                    <div class="social-btn">in</div>
+                    <div class="social-btn">X</div>
+                </div>
+            </div>
+
+            <div style="flex: 1.5; min-width: 300px; padding: 60px;">
+                <h2 style="color: #8FD646; margin-bottom: 10px;">Send a Message</h2>
+                <p style="color: #888; margin-bottom: 40px;">We usually reply within 24 hours.</p>
+                
+                <form action="#" style="display: flex; flex-direction: column; gap: 25px;">
+                    
+                    <div style="display: flex; gap: 20px;">
+                        <div style="flex: 1;">
+                            <label style="color: #ccc; font-size: 14px; margin-bottom: 8px; display: block;">Your Name</label>
+                            <input type="text" class="contact-input" placeholder="John Doe">
+                        </div>
+                        <div style="flex: 1;">
+                            <label style="color: #ccc; font-size: 14px; margin-bottom: 8px; display: block;">Phone Number</label>
+                            <input type="text" class="contact-input" placeholder="+94 7...">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label style="color: #ccc; font-size: 14px; margin-bottom: 8px; display: block;">Your Email</label>
+                        <input type="email" class="contact-input" placeholder="john@example.com">
+                    </div>
+
+                    <div>
+                        <label style="color: #ccc; font-size: 14px; margin-bottom: 8px; display: block;">Message</label>
+                        <textarea rows="4" class="contact-input" placeholder="How can we help you?" style="resize: none;"></textarea>
+                    </div>
+
+                    <button type="button" class="send-btn">
+                        Send Message
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

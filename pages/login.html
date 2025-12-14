@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriCare - Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="auth-body">
+
+    <a href="../index.html" style="position: absolute; top: 30px; left: 30px; color: #888; text-decoration: none; font-size: 14px;">
+        ← Back to Home
+    </a>
+
+    <div class="auth-container">
+        
+        <div class="auth-visual">
+            <div class="auth-glow-circle"></div>
+            <h1 style="position: relative; z-index: 2; font-size: 3rem; color: white;">Welcome<br>Back.</h1>
+            <p style="position: relative; z-index: 2; color: #888; margin-top: 10px;">
+                Access your crop history and AI analysis dashboard.
+            </p>
+        </div>
+
+        <div class="auth-form-side">
+            <h2 style="color: #8FD646; margin-bottom: 30px;">Log In</h2>
+            
+            <form id="loginForm" onsubmit="handleLogin(event)"> 
+                
+                <label style="color: #ccc; font-size: 14px; margin-bottom: 8px; display: block;">Email Address</label>
+                <input type="email" id="emailInput" class="auth-input" placeholder="farmer@gmail.com" required>
+
+                <label style="color: #ccc; font-size: 14px; margin-bottom: 8px; display: block;">Password</label>
+                <input type="password" class="auth-input" placeholder="••••••••" required>
+
+                <div style="display: flex; justify-content: space-between; margin-bottom: 30px; font-size: 13px;">
+                    <label style="color: #888;">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" style="color: #8FD646; text-decoration: none;">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="auth-btn">Access Dashboard</button>
+            </form>
+
+            <p style="margin-top: 20px; color: #666; font-size: 14px; text-align: center;">
+                Don't have an account? <a href="signup.html" style="color: white; font-weight: bold; text-decoration: none;">Sign Up</a>
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            // 1. Stop the page from reloading immediately
+            event.preventDefault();
+
+            // 2. Get the email the user typed
+            var email = document.getElementById('emailInput').value;
+
+            // 3. Check if it is the Admin
+            if (email === "admin@agricare.sl") {
+                // Go to Admin Page
+                window.location.href = "admin.html";
+            } else {
+                // Go to Home Page (Regular User)
+                window.location.href = "../index.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
